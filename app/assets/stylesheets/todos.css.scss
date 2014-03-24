@@ -36,10 +36,13 @@
     margin: auto;
     width: 100%;
     font-size: 18px;
+    border-spacing: 0px;
   }
 
   tr.data {
-    
+    &:hover, &.dragRow {
+      background-color: #EEE;
+    }
   }
 
   tr.add_new {
