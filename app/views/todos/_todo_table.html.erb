@@ -1,4 +1,4 @@
-<table class="todo_table" change_order_url="<%= change_order_user_todos_path(@user['id']) %>">
+<table class="todo_table" change_order_url="<%= change_order_user_todos_path(@user.id) %>">
   <tr class="nodrag">
     <th>ID</th>
     <th>Description</th>
@@ -9,7 +9,7 @@
   <% end %>
   <tr class="add_new nodrag">
     <td>
-      <%= link_to "Add New", 'javascript:void(0)', :class => 'add_todo button_link', :onclick => 'add_todo()', :url => user_todos_path(@user['id']) %>
+      <%= link_to "Add New", 'javascript:void(0)', :class => 'add_todo button_link', :onclick => 'add_todo()', :url => user_todos_path(@user.id) %>
     </td>
     <td><%= text_field_tag :description %></td>
     <td class="right">

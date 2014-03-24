@@ -4,10 +4,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    response = post_request('/users/sign_in', {:email => params[:email], :password => params[:password]})
+    @user = User.new(params)
+    response = post_request('/users/sign_in', @user.serializable_hash.merge(:password => params[:password]))
     ret = parse_json_response(response)
     if response.code == '200'
-      session[:user] = ret
+      session[:user] = User.new(ret)
       render :json => {:url => user_todos_path(ret["id"])}
     else
       render :json => ret, :status => response.code

@@ -46,6 +46,6 @@ class ApplicationController < ActionController::Base
   end
 
   def default_params
-    session["user"].nil? ? {} : {:api_token => session["user"]["api_token"]}
+    session["user"].nil? ? {} : {:api_token => session["user"].api_token}
   end
 end
