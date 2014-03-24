@@ -1,0 +1,20 @@
+<table class="todo_table" change_order_url="<%= change_order_user_todos_path(@user['id']) %>">
+  <tr class="nodrag">
+    <th>ID</th>
+    <th>Description</th>
+    <th class="right">Status</th>
+  </tr>
+  <% @todos.each do |todo, i| %>
+    <%= render :partial => "/todos/todo_row", :locals => {:todo => todo, :i => i} %>
+  <% end %>
+  <tr class="add_new nodrag">
+    <td>
+      <%= link_to "Add New", 'javascript:void(0)', :class => 'add_todo button_link', :onclick => 'add_todo()', :url => user_todos_path(@user['id']) %>
+    </td>
+    <td><%= text_field_tag :description %></td>
+    <td class="right">
+      <%= check_box_tag :is_complete %>
+      <label>Is Complete</label>
+    </td>
+  </tr>
+</table>

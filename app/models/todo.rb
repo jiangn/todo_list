@@ -1,0 +1,3 @@
+class Todo < ActiveModelBase
+  
+end

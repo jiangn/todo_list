@@ -1,0 +1,10 @@
+<%= javascript_include_tag "jquery.tablednd" %>
+<div class="page_header">
+  <h2>Welcome: <%= @user["email"] %></h2>
+  <div class="logout_wrapper">
+    <%= link_to "Logout", 'javascript:void(0)', :class => 'logout', :onclick => "logout(#{@user['id']})" %>
+  </div>
+</div>
+<div class="todo_list_wrapper">
+  <%= render :partial => "/todos/todo_table" %>
+</div>

@@ -1,0 +1,17 @@
+// Place all the styles related to the session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.login_form_wrapper {
+  border: solid 1px #999;
+  border-radius: 15px;
+  margin: auto;
+  width: 400px;
+  text-align: center;
+  padding: 0px 0px 20px 0px;
+
+  input[type='text'], input[type='password'] {
+    width: 200px;
+    height: 20px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,11 @@
+<tr class="data" data_id = "<%= todo['id'] %>">
+  <td><%= todo["id"] %></td>
+  <td class="<%= todo["is_complete"] ? 'complete description' : 'not_complete description' %>"><%= todo["description"] %></td>
+  <td class="right">
+    <% if todo["is_complete"] %>
+      <%='completed'%>
+    <% else %>
+      <%= link_to "Mark Complete", 'javascript:void(0)', :class => 'mark_complete', :onclick => "mark_complete('#{user_todo_mark_complete_path(@user['id'], todo['id'])}')" %>
+    <% end %>
+  </td>
+</tr>

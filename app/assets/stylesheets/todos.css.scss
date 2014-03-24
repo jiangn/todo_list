@@ -1,0 +1,52 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page_header {
+  margin: auto;
+  width: 800px;
+  
+  h2 {
+    text-align: center;
+  }
+
+  .logout_wrapper {
+    text-align: right;
+  }
+}
+
+.todo_list_wrapper {
+  margin: auto;
+  width: 800px;
+  
+  th, td {
+    text-align: left;
+    padding: 5px;
+    
+    &.right {
+      text-align: right;
+    }
+
+    &.description.complete {
+      text-decoration: line-through;
+    }
+  }
+
+  .todo_table {
+    margin: auto;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  tr.data {
+    
+  }
+
+  tr.add_new {
+    input#description {
+      width: 500px;
+      height: 22px;
+      font-size: 18px;
+    }
+  }
+}

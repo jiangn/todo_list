@@ -1,0 +1,16 @@
+<div class='login_form_wrapper'>
+  <h2>Login</h2>
+  <%= form_tag users_path, :id => "login_form" do %>
+    <dl>
+      <dt>Email</dt>
+      <dt><%= text_field_tag :email, 'user1@example.org' %></dd>
+    </dl>
+    <dl>
+      <dt>Password</dt>
+      <dt><%= password_field_tag :password, 'password' %></dd>
+    </dl>
+    <dl>
+      <%= link_to "Submit", 'javascript:void(0)', :class => 'submit button_link', :onclick => 'login()' %>
+    </dl>
+  <% end %>
+</div>
